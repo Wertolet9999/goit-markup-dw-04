@@ -16,6 +16,7 @@
     --visual-text-color: #2F303A;
     --background-color: #F5F4FA;
     --border-color: #ECECEC;
+    --icon-color: #AFB1B8;
 }
 
 .visually-hidden {
@@ -101,8 +102,9 @@
 }
 
 .contacts .link {
-                                                           /*Контакти хедера*/
-
+    display: flex;
+    align-items: center;
+                                                              /*Контакти хедера*/
     color: var(--secondary-text-color);
     font-weight: 500;
     line-height: 1.14;
@@ -115,6 +117,15 @@
     display: flex;
     align-items: center;
 }
+.mail-icon,
+.tel-icon{
+    /*width: 16px;
+    height: 12px;*/
+    margin-right: 10px;
+    fill: var(--secondary-text-color);
+
+}
+ 
 
 .list {
 
@@ -123,13 +134,25 @@
     list-style-type: none;
 }
 
+.overlay {                                     /* фон */
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--visual-text-color);
+    background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+            ),
+        url(../images/img-hero.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
 .hero {
 
     padding-top: 200px;
-    padding-bottom: 200px;
-
-    background-color: var(--visual-text-color);
-                                                          /*Для візуального відображення тексту*/
+    padding-bottom: 200px;                                                   
     text-align: center;
 }
 
@@ -179,6 +202,22 @@
 .quality-list {
 
     display: flex;
+}
+.quality-icon {
+
+    display: flex;
+    width: 270px;
+    height: 120px;
+    background-color: var(--background-color);
+    border-radius: 4px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.quality-icon .icon{
+    
+    width: 70px;
+    height: 70px;
 }
 
 .quality-list .item:not(:last-child) {
@@ -269,7 +308,7 @@
 
                                                                        /*список посад у команді*/
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 16px;
 
     color: var(--secondary-text-color);
     font-size: 16px;
@@ -283,6 +322,68 @@
 .team-list img {
 
     display: block;
+}
+.social-list {
+
+    display: flex;
+    margin-right: 0;
+    justify-content: center;
+}
+
+.social-list .item:not(:last-child){
+    margin-right: 10px;
+}
+.social-list .item:hover,
+.social-list .item:focus{
+    background-color: var(--accent-color);
+    border-radius: 50%;
+}
+.social-link:hover>.social-icon,
+.social-link:focus>.social-icon{
+    fill: var(--white-color);
+}
+
+.social-link{
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+width: 20px;
+height: 20px;
+  fill: var(--icon-color);
+}
+.client-list {
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.client-link{
+
+    display: flex;
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+}
+
+.client-icon {
+    
+    width: 170px;
+    height: 92px;
+    fill:var(--icon-color);   
+
+}
+
+.client-link:hover{
+    border-color: var(--accent-color);
+}
+
+.client-link:hover>.client-icon{
+    fill:var(--accent-color);
 }
 
 .footer-section {
@@ -309,11 +410,17 @@
 .web-part,
 .site-nav-list .link:hover,
 .site-nav-list .link:focus,
-                                                         /*стилізація  логотипу + ховери і фокуси посилань та кнопок*/
 .contacts .link:hover,
-.contacts .link:focus {
+.contacts .link:focus,
+.mail-link:hover>.mail-icon,
+.mail-link:focus>.mail-icon,
+.tel-link:hover>.tel-icon,
+.tel-link:focus>.tel-icon{
     color: var(--accent-color);
-}
+    fill: currentColor;
+    
+ }                                                      /*стилізація  логотипу + ховери і фокуси посилань та кнопок*/
+
 
 .local {
                                                                                  /*адреса у футері*/
@@ -335,6 +442,25 @@
 .contacts-list .item:not(:last-child) {
 
     margin-bottom: 9px;
+}
+
+.social-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    color: var(--white-color);
+    line-height: 1.14;
+    text-transform: uppercase;
+
+}
+
+.footer-flex{
+    display: flex;
+    align-items: baseline;
+    gap: 70px;
+}
+.social-link .footer{
+    fill: var(--white-color);
 }
 
 .button-list button {
