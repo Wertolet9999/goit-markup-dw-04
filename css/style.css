@@ -147,7 +147,8 @@
 }
 
 .hero {
-
+    max-width: 1600px;
+    margin: 0 auto;
     padding-top: 200px;
     padding-bottom: 200px;                                                   
     text-align: center;
@@ -322,12 +323,15 @@
 .social-list .item:not(:last-child){
     margin-right: 10px;
 }
-.social-list .item:hover, .social-list .social-link:focus {
+.social-list .item:hover,
+.social-list .social-link:focus {
 
     background-color: var(--accent-color);
     border-radius: 50%;
 }
-.social-link:hover>.social-icon, .social-link:focus>.social-icon {
+
+.social-link:hover>.social-icon,
+.social-link:focus>.social-icon {
 
     fill: var(--white-color);
 }
@@ -338,7 +342,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+   
+  }
 
 .social-icon {
 
@@ -441,6 +446,7 @@
 
     color: var(--white-color);
     line-height: 1.14;
+    font-weight: 700;
     text-transform: uppercase;
 
 }
@@ -451,9 +457,25 @@
     align-items: baseline;
     gap: 70px;
 }
-.social-link .footer {
+.social-link-footer{
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--visual-text-color);
+    border-radius: 50%;
+}
+.social-link-footer .social-icon {
 
     fill: var(--white-color);
+
+}
+.social-link-footer:hover,
+.social-link-footer:focus{
+    background-color: var(--accent-color);
+    fill: var(--white-color);
+    
 }
 
 .button-list button {
